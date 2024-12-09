@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
+import GoBack from '@/components/GoBack.vue';
 
 const route = useRoute();
 const destination = ref(null);
@@ -14,6 +15,7 @@ onMounted(async () => {
 
 <template>
   <div v-if="destination" class="destination">
+    <GoBack />
     <h1>{{ destination.name }}</h1>
     <img :src="`/images/${destination.image}`" :alt="destination.name" />
     <p>{{ destination.description }}</p>
@@ -31,8 +33,4 @@ onMounted(async () => {
       </router-link>
     </div>
   </div>
-  <p v-else>Cargando datos...</p>
 </template>
-
-<style scoped>
-</style>
