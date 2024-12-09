@@ -10,13 +10,13 @@ const routes = [
     component: HomeView,
   },
   {
-    path: '/destination/:id/:slug', // Ruta dinámica para destinos
+    path: '/destination/:id/:slug',
     name: 'destination.show',
     component: DestinationShow,
     props: true,
   },
   {
-    path: '/experience/:id/:slug', // Ruta para experiencias de un destino
+    path: '/experience/:id/:slug',
     name: 'experience.show',
     component: ExperienceShow,
     props: true,

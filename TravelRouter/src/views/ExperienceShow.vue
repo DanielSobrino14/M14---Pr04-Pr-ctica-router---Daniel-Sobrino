@@ -9,9 +9,9 @@ const experience = ref(null);
 onMounted(async () => {
   const response = await fetch('/data.json');
   const data = await response.json();
-  const destination = data.destinations.find(dest => dest.id === parseInt(route.params.id));
+  const destination = data.destinations.find(destino => destino.id === parseInt(route.params.id));
   if (destination) {
-    experience.value = destination.experiences.find(exp => exp.slug === route.params.slug);
+    experience.value = destination.experiences.find(experiencia => experiencia.slug === route.params.slug);
   }
 });
 </script>
