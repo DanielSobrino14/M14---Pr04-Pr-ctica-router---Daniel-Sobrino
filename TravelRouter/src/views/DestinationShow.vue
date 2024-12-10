@@ -33,7 +33,6 @@ cargarDestino();
         { slug: experience.slug, id: destination.id } }">
         <h3>{{ experience.name }}</h3>
         <img :src="`/images/${experience.image}`" :alt="experience.name" />
-        <p>{{ experience.description }}</p>
       </router-link>
     </div>
   </div>
